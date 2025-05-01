@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO.Ports;
 
-public class SerialBiometricController : MonoBehaviour
+public class biocontroller : MonoBehaviour
 {
     public Text statusText;
     SerialPort serial = new SerialPort("COM3", 9600);
