@@ -29,7 +29,7 @@ Step 2: Setup UI
 
 Step 3: Import Script
 - Create folder: Assets/Scripts
-- Add script: Biocontroller.cs
+- Add script: biocontroller.cs
 - Drag script to a new Empty GameObject (Manager)
 
 Step 4: Link Text Object to Script
