@@ -52,7 +52,7 @@ Arduino Setup Instructions:
    - VCC → 5V
    - GND → GND
 
-2. Upload the provided `biometric_lock.ino` to Arduino using Arduino IDE
+2. Upload the provided `biolock.ino` to Arduino using Arduino IDE
 
 3. Open Unity → Play → Show fingerprint to sensor
 
