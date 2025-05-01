@@ -1,0 +1,63 @@
+Project: Smart Biometric Door Lock System
+Technology: Unity (C#), Arduino (C++), Serial Communication
+
+Description:
+A smart biometric door locking system where fingerprint access is handled by Arduino,
+and Unity shows access feedback with visual UI and door animations.
+
+----------------------------------
+Hardware Requirements:
+----------------------------------
+- Arduino Uno or Nano
+- R305 or GT-511C3 Fingerprint Sensor
+- Servo Motor (optional for physical lock)
+- Breadboard and jumper wires
+- USB Cable for serial communication
+----------------------------------
+Unity Setup Instructions:
+----------------------------------
+
+Step 1: Create Unity 2D Project
+- Open Unity Hub → New Project → 2D Core
+- Name it: Biometric-Lock
+
+Step 2: Setup UI
+- Right-click in Hierarchy → UI → Canvas
+- Right-click Canvas → UI → Text → Rename it to "StatusText"
+- Change Text value to "Waiting for Input"
+- Set Text color to white, increase size for readability
+
+Step 3: Import Script
+- Create folder: Assets/Scripts
+- Add script: Biocontroller.cs
+- Drag script to a new Empty GameObject (Manager)
+
+Step 4: Link Text Object to Script
+- Click Manager in Hierarchy
+- In Inspector, find the Biocontroller component
+- Drag "StatusText" into the `statusText` public field
+
+Step 5: Enable SerialPort Support
+- Go to Edit → Project Settings → Player → Other Settings
+- Set Api Compatibility Level to **.NET Framework**
+- Save and restart Unity if prompted
+
+----------------------------------
+Arduino Setup Instructions:
+----------------------------------
+
+1. Connect R305 fingerprint sensor:
+   - Sensor TX → Arduino Pin 2 (SoftwareSerial RX)
+   - Sensor RX → Arduino Pin 3 (SoftwareSerial TX)
+   - VCC → 5V
+   - GND → GND
+
+2. Upload the provided `biometric_lock.ino` to Arduino using Arduino IDE
+
+3. Open Unity → Play → Show fingerprint to sensor
+
+4. Unity will display:
+   - "Access Granted" (if recognized)
+   - "Access Denied" (if not)
+
+
